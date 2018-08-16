@@ -7,6 +7,7 @@ import com.cs.user.R
 import com.cs.user.presenter.RegistPresenter
 import com.cs.user.presenter.view.RegisterView
 import kotlinx.android.synthetic.main.activity_regisit.*
+
 import org.jetbrains.anko.toast
 
 
