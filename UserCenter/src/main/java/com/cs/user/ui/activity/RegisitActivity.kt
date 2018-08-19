@@ -8,6 +8,7 @@ import com.cs.user.presenter.RegistPresenter
 import com.cs.user.presenter.view.RegisterView
 import kotlinx.android.synthetic.main.activity_regisit.*
 
+
 import org.jetbrains.anko.toast
 
 
@@ -23,7 +24,8 @@ class RegisitActivity : BaseMvpActivity<RegistPresenter>(), RegisterView {
         mPresenter=RegistPresenter()  //实例化presenter
         mPresenter.mView=this  //实例化mview
         mBtnTest.setOnClickListener {
-           mPresenter.register("","")
+           mPresenter.register("","","")
+
         }
     }
 
