@@ -6,6 +6,7 @@ if (isUserModule.toBoolean()){
 
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 
 android {
@@ -50,6 +51,9 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Anko Commons
     implementation project(':Provider')
+
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 
 }
 

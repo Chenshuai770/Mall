@@ -13,18 +13,22 @@ import org.jetbrains.anko.toast
 
 
 class RegisitActivity : BaseMvpActivity<RegistPresenter>(), RegisterView {
-    
-    override fun onRegisterResult(result: Boolean) {
-        toast("注册成功")
+
+    override fun onRegisterResult(result: Boolean, msg: String) {
+        if (result) {
+            toast("注册成功")
+        } else {
+            toast(msg)
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regisit)
-        mPresenter=RegistPresenter()  //实例化presenter
-        mPresenter.mView=this  //实例化mview
+        mPresenter = RegistPresenter()  //实例化presenter
+        mPresenter.mView = this  //实例化mview
         mBtnTest.setOnClickListener {
-           mPresenter.register("","","")
+            mPresenter.register("13567594939", "123456", "123456")
 
         }
     }

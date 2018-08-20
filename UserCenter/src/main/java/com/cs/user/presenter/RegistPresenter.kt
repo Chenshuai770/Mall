@@ -22,7 +22,12 @@ class RegistPresenter : BasePresenter<RegisterView>() {
         userService.regisiter(mobile,verifyCode,pwd)
                 .execute(object :BaseSubscriber<Boolean>(){
                     override fun onNext(t: Boolean) {
-                        mView.onRegisterResult(t)
+                        mView.onRegisterResult(t,"")
+                    }
+
+                    override fun onError(e: Throwable) {
+                        println(e.message)
+                       // mView.onRegisterResult(false, e.message!!)
                     }
                 })
 
