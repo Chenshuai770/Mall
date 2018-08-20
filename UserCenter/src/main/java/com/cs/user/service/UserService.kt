@@ -10,7 +10,7 @@ import io.reactivex.Observable
  *Descripton
  */
 interface UserService {
-    fun regisiter(mobile: String, verfyCode: String, pwd: String): Observable<Boolean>
+    fun regisiter(mobile: String, pwd: String, verfyCode: String): Observable<Boolean>
 }
 
 /*

@@ -1,7 +1,7 @@
 package com.cs.user.service.iml
 
+import com.cs.user.data.repository.UserRepository
 import com.cs.user.service.UserService
-import io.reactivex.Flowable
 import io.reactivex.Observable
 
 
@@ -11,8 +11,19 @@ import io.reactivex.Observable
  *Descripton
  */
 class UserServiceIml:UserService {
-    override fun regisiter(mobile: String, verfyCode: String, pwd: String): Observable<Boolean> {
-        return Observable.just(true)
+    override fun regisiter(mobile: String, pwd: String, verfyCode: String): Observable<Boolean> {
+        val repository=UserRepository()
+        return repository.regisiter(mobile, pwd, verfyCode)
+                .flatMap {
+
+                    if (it.status!=0){
+
+                    }
+                    return@flatMap Observable.just(true)
+                }
+
+
+
     }
 
 }
