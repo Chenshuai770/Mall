@@ -8,12 +8,15 @@ import io.reactivex.Observable
 import io.reactivex.functions.Function
 
 
+
 /**
  *Create by Chenshuai
  *Date 2018/8/19 12:54
  *Descripton
  */
-class UserServiceIml : UserService {
+class UserServiceIml  : UserService {
+
+    lateinit var repository: UserRepository
     override fun regisiter(mobile: String, pwd: String, verfyCode: String): Observable<Boolean> {
         val repository = UserRepository()
         return repository.regisiter(mobile, pwd, verfyCode)

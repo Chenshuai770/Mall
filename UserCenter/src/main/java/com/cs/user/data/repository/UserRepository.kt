@@ -11,7 +11,7 @@ import io.reactivex.Observable
  *Date 2018/8/20 8:25
  *Descripton
  */
-class UserRepository {
+class UserRepository{
     fun regisiter(mobile: String, pwd: String, verfyCode: String): Observable<BaseResp<String>>{
         return RetrofitFactory.instance.create(UserApi::class.java).register(RegisterReq(mobile,pwd,verfyCode))
     }

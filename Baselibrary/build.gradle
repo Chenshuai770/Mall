@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion 28
@@ -46,10 +46,14 @@ dependencies {
     //api "com.squareup.retrofit2:adapter-rxjava:${retrofit_version}"
     api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     /*api 'com.android.support:support-v4:28.0.0-rc01'*/
+    // 支持Kotlin语法的RxLifecycle基础库
+    api 'com.trello.rxlifecycle2:rxlifecycle-kotlin:2.1.0'
+    // 支持Kotlin语法的Android库
+    api 'com.trello.rxlifecycle2:rxlifecycle-android-lifecycle-kotlin:2.2.2'
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.2'
 
-    //Dagger2
-    api "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
 }
 
 
