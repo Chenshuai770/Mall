@@ -3,9 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.activity.RegisitActivity">
 
+    <com.cs.base.wedgets.HeaderBar
+         style="@style/MatchWrap"
+        app:isShowBack="false"
+        app:titleText="注册"
+        app:rightText="登录"
+    />
     <TextView
         android:id="@+id/mTvTitle"
         android:text="注册页面"

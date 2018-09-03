@@ -1,7 +1,9 @@
 package com.cs.user.service.iml
 
 import com.cs.base.data.protocol.BaseResp
+import com.cs.base.ext.convertBoolean
 import com.cs.base.rx.BaseException
+import com.cs.base.rx.BaseFuncBoolean
 import com.cs.user.data.repository.UserRepository
 import com.cs.user.service.UserService
 import io.reactivex.Observable
@@ -15,9 +17,13 @@ import io.reactivex.functions.Function
  *Descripton
  */
 class UserServiceIml  : UserService {
-
-    lateinit var repository: UserRepository
     override fun regisiter(mobile: String, pwd: String, verfyCode: String): Observable<Boolean> {
+        val repository=UserRepository()
+        return repository.regisiter(mobile,pwd,verfyCode).convertBoolean()
+
+    }
+
+    /*override fun regisiter(mobile: String, pwd: String, verfyCode: String): Observable<Boolean> {
         val repository = UserRepository()
         return repository.regisiter(mobile, pwd, verfyCode)
                 .flatMap(object : Function<BaseResp<String>, Observable<Boolean>> {
@@ -28,8 +34,6 @@ class UserServiceIml  : UserService {
                         return Observable.just(true)
                     }
                 })
-
-
-    }
+    }*/
 
 }

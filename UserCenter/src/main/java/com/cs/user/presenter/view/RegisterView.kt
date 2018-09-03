@@ -8,5 +8,5 @@ import com.cs.base.presenter.view.BaseView
  *Descripton
  */
 interface RegisterView:BaseView{
-    fun onRegisterResult(result: Boolean,msg:String)
+    fun onRegisterResult(result: String)
 }
