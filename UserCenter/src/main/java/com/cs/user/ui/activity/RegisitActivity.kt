@@ -40,15 +40,7 @@ class RegisitActivity : BaseMvpActivity<RegistPresenter>(), RegisterView {
         })
     }
 
-    override fun onStop() {
-        super.onStop()
-        Log.e("onStop", "onStop")
-    }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.e("onDestroy", "onDestroy")
-    }
 
     override fun onBackPressed() {
 

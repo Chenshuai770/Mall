@@ -22,10 +22,10 @@ class LoginActivity : AppCompatActivity() {
         })*/
 
         mBtnlogin.OnClick (View.OnClickListener {
-            /*var intent = Intent(this@LoginActivity,RegisitActivity::class.java)
-            startActivity(intent)*/
-            val mDialog=ProgressLoading.create(this)
-            mDialog.showLoading()
+            var intent = Intent(this@LoginActivity,RegisitActivity::class.java)
+            startActivity(intent)
+            /*val mDialog=ProgressLoading.create(this)
+            mDialog.showLoading()*/
 
         })
     }

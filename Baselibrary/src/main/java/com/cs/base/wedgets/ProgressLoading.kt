@@ -18,7 +18,6 @@ class ProgressLoading private constructor(context: Context,theme:Int):Dialog(con
         private lateinit var mDialog: ProgressLoading
         private var animDrawable:AnimationDrawable?=null
 
-
         fun create(context: Context): ProgressLoading {
             //样式引入
             mDialog= ProgressLoading(context, R.style.LightProgressDialog)
@@ -28,7 +27,7 @@ class ProgressLoading private constructor(context: Context,theme:Int):Dialog(con
             mDialog.setCanceledOnTouchOutside(false)//点击外部不可以取消
 
             var lp = mDialog.window.attributes
-            lp.dimAmount=0.5f //dialog背景透明度
+            lp.dimAmount=0.2f //dialog背景透明度
             lp.gravity=Gravity.CENTER
             //设置属性
             mDialog.window.attributes=lp
