@@ -1,7 +1,7 @@
 package com.cs.base.common
 
 import android.app.Application
-import com.cs.base.injection.module.ActivityModule
+import android.content.Context
 import com.cs.base.injection.module.AppModule
 
 
@@ -17,6 +17,13 @@ class BaseApplication : Application() {
         super.onCreate()
         appModule= AppModule(this)
 
+    }
+
+    /**
+     * 全局伴生对象
+     */
+    companion object {
+        lateinit var context: Context
     }
 
 }

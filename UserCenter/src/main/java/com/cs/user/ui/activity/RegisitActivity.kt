@@ -2,13 +2,11 @@ package com.cs.user.ui.activity
 
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import com.cs.base.common.AppManager
 import com.cs.base.ext.OnClick
 import com.cs.base.ui.activity.BaseMvpActivity
 import com.cs.user.R
-import com.cs.user.R.id.mBtnRegister
 import com.cs.user.presenter.RegistPresenter
 import com.cs.user.presenter.view.RegisterView
 import kotlinx.android.synthetic.main.activity_regisit.*
@@ -31,7 +29,6 @@ class RegisitActivity : BaseMvpActivity<RegistPresenter>(), RegisterView {
         mBtnRegister.setOnClickListener {
             mPresenter.register("13567594934", "123456", "123456")
             // mPresenter.login( )
-
         }
         mBtnTest.OnClick(object : View.OnClickListener {
             override fun onClick(v: View?) {
@@ -39,9 +36,6 @@ class RegisitActivity : BaseMvpActivity<RegistPresenter>(), RegisterView {
             }
         })
     }
-
-
-
     override fun onBackPressed() {
 
         val time=System.currentTimeMillis()

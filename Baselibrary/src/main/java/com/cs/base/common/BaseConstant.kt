@@ -7,7 +7,9 @@ package com.cs.base.common
  */
  class BaseConstant{
     companion object {
-        val SERVER_ADDRESS="http://139.159.161.40:8080/Kotlin_Server/"
+        const val SERVER_ADDRESS="http://139.159.161.40:8080/Kotlin_Server/"
         //val SERVER_ADDRESS="http://127.0.0.1:8080/"
+        //SP表名
+        const val TABLE_PREFS = "mall"
     }
 }

@@ -4,11 +4,11 @@ import android.os.Bundle
 import com.cs.base.injection.module.ActivityModule
 import com.cs.base.presenter.BasePresenter
 import com.cs.base.presenter.view.BaseView
-import com.cs.base.utils.NetWorkUtils
 import com.cs.base.wedgets.ProgressLoading
 
 
 open class BaseMvpActivity<T : BasePresenter<*>> : BaseActivity(), BaseView {
+
 
 
     lateinit var mPresenter: T
