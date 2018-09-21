@@ -47,6 +47,10 @@ android {
 
 }
 
+tasks.withType(Compiler){
+    options.encoding = "UTF-8"
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     // Anko Commons
