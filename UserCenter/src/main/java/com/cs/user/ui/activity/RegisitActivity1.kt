@@ -18,7 +18,8 @@ class RegisitActivity1 : BaseMvpActivity<RegistPresenter>(), RegisterView, View.
 
 
     override fun onRegisterResult(result: String) {
-
+        toast(result)
+        finish()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,11 @@ class RegisitActivity1 : BaseMvpActivity<RegistPresenter>(), RegisterView, View.
         初始化视图
      */
     private fun initView() {
+        mPresenter = RegistPresenter()  //实例化presenter
+        mPresenter.mView = this  //实例化mview
+        mPresenter.mActivity = this  //实例化activity
+        lifecycle.addObserver(mPresenter)
+
         //判断是否可用,代码逻辑简单了很多
         mRegisterBtn.enable(mMobileEt,{isBtnEnable()})
         mRegisterBtn.enable(mVerifyCodeEt,{isBtnEnable()})
